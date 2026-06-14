@@ -1,0 +1,373 @@
+{
+  "summary": {
+    "total_cases": 20,
+    "schema_required_table_recall": 1.0,
+    "text_to_sql_success_rate": 1.0,
+    "average_latency_seconds": 12.705,
+    "p95_latency_seconds": 18.021
+  },
+  "case_results": [
+    {
+      "index": 1,
+      "question": "销售额最高的商品及其销售额是多少？",
+      "required_tables": [
+        "order_items",
+        "orders",
+        "products"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 14.907,
+      "answer": "销售额最高的商品是“扫地机器人”，其销售额为 5198.0 元。"
+    },
+    {
+      "index": 2,
+      "question": "销量最高的商品是什么？",
+      "required_tables": [
+        "order_items",
+        "products"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 14.321,
+      "answer": "销量最高的商品是**无线耳机**，总销量为 3 件。"
+    },
+    {
+      "index": 3,
+      "question": "每个商品的销售额是多少？",
+      "required_tables": [
+        "order_items",
+        "orders",
+        "products"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 16.205,
+      "answer": "每个商品的销售额如下：\n\n- 智能手机：3999.0 元  \n- 无线耳机：1497.0 元  \n- 扫地机器人：5198.0 元  \n- 机械键盘：1398.0 元"
+    },
+    {
+      "index": 4,
+      "question": "已支付订单一共有多少个？",
+      "required_tables": [
+        "orders"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 6.671,
+      "answer": "已支付订单一共有 4 个。"
+    },
+    {
+      "index": 5,
+      "question": "退款订单数量是多少？",
+      "required_tables": [
+        "orders"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 6.476,
+      "answer": "退款订单数量是 1。"
+    },
+    {
+      "index": 6,
+      "question": "每个城市有多少用户？",
+      "required_tables": [
+        "users"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 8.442,
+      "answer": "根据查询结果，各城市的用户数量如下：\n\n- 上海：2 个用户  \n- 南京：1 个用户  \n- 杭州：1 个用户"
+    },
+    {
+      "index": 7,
+      "question": "哪个城市的用户最多？",
+      "required_tables": [
+        "users"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 6.571,
+      "answer": "用户数量最多的城市是**上海**，共有2位用户。"
+    },
+    {
+      "index": 8,
+      "question": "每个用户下了多少订单？",
+      "required_tables": [
+        "orders",
+        "users"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 14.868,
+      "answer": "每个用户的订单数量如下：\n\n- Alice：2个订单  \n- Bob：1个订单  \n- Cindy：1个订单  \n- David：1个订单"
+    },
+    {
+      "index": 9,
+      "question": "每个用户的消费金额是多少？",
+      "required_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 18.021,
+      "answer": "每个用户的消费金额如下：\n\n- Alice：6395.0 元\n- Bob：2599.0 元\n- Cindy：0 元（无已支付订单）\n- David：3098.0 元"
+    },
+    {
+      "index": 10,
+      "question": "购买扫地机器人的用户有哪些？",
+      "required_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 15.216,
+      "answer": "购买扫地机器人的用户有：Bob 和 David。"
+    },
+    {
+      "index": 11,
+      "question": "各商品类别的销售额是多少？",
+      "required_tables": [
+        "order_items",
+        "orders",
+        "products"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 15.543,
+      "answer": "各商品类别的销售额如下：\n\n- 家电：5198.0 元  \n- 数码：6894.0 元"
+    },
+    {
+      "index": 12,
+      "question": "平均每个订单包含多少件商品？",
+      "required_tables": [
+        "order_items",
+        "orders"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 15.232,
+      "answer": "平均每个订单包含约1.33件商品（基于已支付订单计算）。"
+    },
+    {
+      "index": 13,
+      "question": "每个订单的商品数量是多少？",
+      "required_tables": [
+        "order_items",
+        "orders"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 17.323,
+      "answer": "每个订单的商品数量如下：\n\n- 订单 ID 1：2 种商品  \n- 订单 ID 2：1 种商品  \n- 订单 ID 3：1 种商品  \n- 订单 ID 4：1 种商品  \n- 订单 ID 5：2 种商品  \n\n这表示每个订单中包含的商品种类数量（即订单明细行数），而非商品总件数。如需统计每个订单的**商品总数量（即 quantity 总和）**，可进一步说明，我可为您重新查询。"
+    },
+    {
+      "index": 14,
+      "question": "单价最高的商品是什么？",
+      "required_tables": [
+        "products"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 5.813,
+      "answer": "单价最高的商品是**智能手机**。"
+    },
+    {
+      "index": 15,
+      "question": "有哪些商品类别？",
+      "required_tables": [
+        "products"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 7.023,
+      "answer": "数据库中的商品类别有以下三种：\n\n- 数码  \n- 家电  \n- 家具"
+    },
+    {
+      "index": 16,
+      "question": "每种订单状态分别有多少订单？",
+      "required_tables": [
+        "orders"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 7.622,
+      "answer": "根据查询结果，订单状态统计如下：\n\n- 已支付（paid）：4 个订单  \n- 已退款（refunded）：1 个订单"
+    },
+    {
+      "index": 17,
+      "question": "每个商品被购买了多少件？",
+      "required_tables": [
+        "order_items",
+        "products"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 15.253,
+      "answer": "每个商品被购买的数量如下：\n\n- 智能手机：1件  \n- 无线耳机：3件  \n- 扫地机器人：2件  \n- 人体工学椅：1件  \n- 机械键盘：2件"
+    },
+    {
+      "index": 18,
+      "question": "最近注册的用户是谁？",
+      "required_tables": [
+        "users"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 13.684,
+      "answer": "最近注册的用户是 David。"
+    },
+    {
+      "index": 19,
+      "question": "每个城市用户的消费金额是多少？",
+      "required_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 19.103,
+      "answer": "每个城市用户的消费金额如下：\n\n- 上海：9493.0 元\n- 杭州：2599.0 元"
+    },
+    {
+      "index": 20,
+      "question": "已支付订单中每个商品的销量是多少？",
+      "required_tables": [
+        "order_items",
+        "orders",
+        "products"
+      ],
+      "retrieved_tables": [
+        "order_items",
+        "orders",
+        "products",
+        "users"
+      ],
+      "schema_hit": true,
+      "sql_success": true,
+      "latency_seconds": 15.81,
+      "answer": "已支付订单中每个商品的销量如下：\n\n- 智能手机：1 件  \n- 无线耳机：3 件  \n- 扫地机器人：2 件  \n- 机械键盘：2 件"
+    }
+  ]
+}

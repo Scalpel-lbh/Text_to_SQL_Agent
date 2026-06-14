@@ -1,0 +1,1 @@
+invalid type: string "表名：products\n表说明：商品信息表，保存商品名称、商品类别和商品单价。适用于查询商品信息、商品分类、价格以及计算销售额。\n字段说明：\n- id：商品唯一标识\n- name：商品名称\n- category：商品类别\n- price：商品单价\n关联关系：\n- products.id 与 order_items.product_id 关联", expected xpected

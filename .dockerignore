@@ -1,0 +1,28 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# IDE 配置
+.vscode/
+.idea/
+
+# Git 文件
+.git/
+.gitignore
+
+# 测试缓存
+.pytest_cache/
+
+# 环境变量和密钥文件
+.env
+
+# 已持久化的 Chroma 数据不复制进镜像
+data/schema_chroma_db/
+
+# 日志文件
+*.log

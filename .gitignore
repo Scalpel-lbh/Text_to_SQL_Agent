@@ -1,0 +1,14 @@
+# 过滤 Python 运行产生的字节码缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 过滤虚拟环境（万一你以后把环境建在项目里）
+.venv/
+venv/
+env/
+ENV/
+
+# 过滤 IDE（编辑器）自带的配置缓存
+.vscode/
+.idea/

@@ -1,0 +1,24 @@
+# FastAPI Web 接口
+fastapi
+uvicorn[standard]
+
+# LangChain Agent 与消息、工具组件
+langchain
+langchain-core
+langchain-community
+
+# Chroma Schema RAG
+langchain-chroma
+chromadb
+
+# 通义千问聊天模型与 Embedding 模型
+dashscope
+
+# SQLite 数据库访问
+SQLAlchemy
+
+# Redis 会话管理
+redis
+
+# FastAPI 数据校验
+pydantic

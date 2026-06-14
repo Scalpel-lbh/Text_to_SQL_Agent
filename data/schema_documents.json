@@ -1,0 +1,60 @@
+[
+  {
+    "table_name": "users",
+    "description": "用户信息表，保存用户姓名、所在城市和注册时间。适用于查询用户数量、城市分布、注册情况以及关联用户订单。",
+    "columns": {
+      "id": "用户唯一标识",
+      "name": "用户姓名",
+      "city": "用户所在城市",
+      "created_at": "用户注册日期"
+    },
+    "relations": [
+      "users.id 与 orders.user_id 关联"
+    ]
+  },
+  {
+    "table_name": "products",
+    "description": "商品信息表，保存商品名称、商品类别和商品单价。适用于查询商品信息、商品分类、价格以及计算销售额。",
+    "columns": {
+      "id": "商品唯一标识",
+      "name": "商品名称",
+      "category": "商品类别",
+      "price": "商品单价"
+    },
+    "relations": [
+      "products.id 与 order_items.product_id 关联"
+    ]
+  },
+  {
+    "table_name": "orders",
+    "description": "订单表，保存订单所属用户、下单日期和订单状态。适用于查询订单数量、下单时间、已支付订单和退款订单。",
+    "columns": {
+      "id": "订单唯一标识",
+      "user_id": "下单用户ID",
+      "order_date": "订单日期",
+      "status": "订单状态，paid表示已支付，refunded表示已退款"
+    },
+    "relations": [
+      "orders.user_id 与 users.id 关联",
+      "orders.id 与 order_items.order_id 关联"
+    ]
+  },
+  {
+    "table_name": "order_items",
+    "description": "订单明细表，保存订单包含的商品和购买数量。适用于计算商品销量、销售额和订单商品明细。",
+    "columns": {
+      "id": "订单明细唯一标识",
+      "order_id": "所属订单ID",
+      "product_id": "商品ID",
+      "quantity": "商品购买数量"
+    },
+    "relations": [
+      "order_items.order_id 与 orders.id 关联",
+      "order_items.product_id 与 products.id 关联"
+    ],
+    "business_rules": [
+      "商品销售额等于 products.price 乘以 order_items.quantity",
+      "统计有效销售额时默认只计算 status 为 paid 的订单"
+    ]
+  }
+]
